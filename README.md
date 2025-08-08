@@ -4,7 +4,7 @@
 
 ## Installation
 
-1. Download the VSXI file from [Releases](https://github.com/darosh/minimeters-vscode-extension/releases)
+1. Download the `*.vsix` file from [Releases](https://github.com/darosh/minimeters-vscode-extension/releases)
 2. In main menu select `View > Extensions` ![](./assets/view.png)
 3. In extension menu select `Install from VSIX...` ![](./assets/extensions.png)
 
