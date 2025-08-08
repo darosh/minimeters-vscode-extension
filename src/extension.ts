@@ -64,7 +64,9 @@ class IniColorProvider implements vscode.DocumentColorProvider {
 		const b = Math.round(color.blue * 255);
 		const a = color.alpha;
 
-		let label = a < 1 ? `${r}, ${g}, ${b}, ${Math.round(a * 255)}` : `${r}, ${g}, ${b}`;
+		let label = a < 1
+		? `${r}, ${g}, ${b}, ${Math.round(a * 255)}`
+		: `${r}, ${g}, ${b}`;
 
 		return [new vscode.ColorPresentation(label)];
 	}
@@ -121,7 +123,7 @@ class MapColorProvider implements vscode.DocumentColorProvider {
 
 		let label = a < 1
 		? `rgba(${r}, ${g}, ${b}, ${Math.round(a * 255)})`
-		: `rgba(${r}, ${g}, ${b}, 255)`;
+		: `rgb(${r}, ${g}, ${b})`;
 
 		return [new vscode.ColorPresentation(label)];
 	}
