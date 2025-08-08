@@ -12,4 +12,4 @@
 
 1. Open the MiniMeters configuration folder in VS Code `/~/Library/Preferences/MiniMeters` (it is the one above the folder you can open from MiniMeters app in menu `Presets > Open Presets Folder...`)
 2. Create `.vscode` folder and place in there the `settings.json` file from [Releases](https://github.com/darosh/minimeters-vscode-extension/releases)
-3. Enjoy the color and syntax highlight in `*.map` and `*.ini` files ![](assets/usage.png)
+3. Enjoy the color and syntax highlight in `*.map` and `*.ini` files ![](./assets/usage-v2.png)

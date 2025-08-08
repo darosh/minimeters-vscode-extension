@@ -2,7 +2,7 @@
   "name": "minimeters",
   "displayName": "minimeters",
   "description": "MiniMeteters configuration",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/darosh/minimeters-vscode-extension",
   "engines": {
     "vscode": "^1.102.0"
