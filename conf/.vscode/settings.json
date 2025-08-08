@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.map": "minimeters-map",
+        "*.ini": "minimeters-ini"
+    },
+    "color-highlight.enable": false
+}

@@ -1,0 +1,80 @@
+{
+  "name": "minimeters",
+  "displayName": "minimeters",
+  "description": "MiniMeteters configuration",
+  "version": "0.0.1",
+  "repository": "https://github.com/darosh/minimeters-vscode-extension",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "minimeters-ini",
+        "aliases": [
+          "MiniMeters INI"
+        ],
+        "extensions": [
+          ".ini"
+        ],
+        "configuration": "./ini.language-configuration.json"
+      },
+      {
+        "id": "minimeters-map",
+        "aliases": [
+          "MiniMeters MAP"
+        ],
+        "extensions": [
+          ".map"
+        ],
+        "configuration": "./ini.language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "minimeters-ini",
+        "scopeName": "source.ini",
+        "path": "./syntaxes/ini.tmLanguage.json"
+      },
+      {
+        "language": "minimeters-map",
+        "scopeName": "source.map",
+        "path": "./syntaxes/map.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "vsce package",
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.32.0",
+    "esbuild": "^0.25.8",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.2",
+    "vsce": "^2.15.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
